@@ -20,25 +20,13 @@ _A full-stack application integrating ServiceNow with a MERN stack, featuring OA
 
 🛠 Tech Stack 
 
-Frontend: 
-
-- React.js (with Context API & Hooks) 
-
-- Material-UI for UI components 
-
-- Socket.IO Client (for WebSockets) 
-
 Backend: 
 
 - Node.js & Express.js 
 
-- MongoDB with Mongoose 
-
 - ServiceNow REST API Integration 
 
-- Socket.IO (for WebSockets) 
-
-- JWT Authentication 
+- Servicenow Oauth authentication 
 
 📌 Getting Started 
 
@@ -51,14 +39,16 @@ cd servicenow-mern-integration
 
 2️⃣ Set Up Environment Variables 
 
-Create a `.env` file in both the **backend** and **frontend** directories with: 
+Create a `.env` file in both the **backendts**: 
 
 ``` 
-SERVICE_NOW_INSTANCE=https://your-instance.service-now.com 
-SERVICE_NOW_CLIENT_ID=your-client-id 
-SERVICE_NOW_CLIENT_SECRET=your-client-secret 
-JWT_SECRET=your-secret-key 
-MONGO_URI=your-mongodb-uri 
+SERVICENOW_INSTANCE= your instance
+CLIENT_ID= your client id
+CLIENT_SECRET= your client secret
+REDIRECT_URI= your callback url
+SESSION_SECRET= your_secret_key
+PORT= your port
+
 ``` 
 
 3️⃣ Install Dependencies 
@@ -70,22 +60,10 @@ cd backend
 npm install 
 ``` 
 
-Frontend 
-
-```sh 
-cd frontend 
-npm install 
-``` 
 
 4️⃣ Start the Project 
 
 Backend 
-
-```sh 
-npm start 
-``` 
-
-Frontend 
 
 ```sh 
 npm start 
@@ -141,9 +119,7 @@ POST
 
 Request a new asset/software 
 
-📢 WebSockets (Real-Time Updates) 
-
-- taskUpdated → Broadcasts onboarding task updates to all users. 
+📢 WebSockets (Real-Time Updates) (Working on it)
 
 - incidentCreated → Notifies users when a new incident is created. 
 
