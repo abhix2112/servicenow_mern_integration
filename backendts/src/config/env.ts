@@ -7,5 +7,10 @@ export const config = {
   redirecturi: process.env.REDIRECT_URI,
   sessionSecret: process.env.SESSION_SECRET,
   port: process.env.PORT || 3000,
+  supabaseUrl: process.env.SUPABASE_URL,
+  supabaseKey: process.env.SUPABASE_ANON_KEY,
+  supabaseStorageUrl: process.env.SUPABASE_STORAGE_URL,
+  resumeParserApiKey: process.env.RESUME_PARSER_API_KEY,
+  servicenow_user_token: process.env.Servicenow_user_token,
 };
 
